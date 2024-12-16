@@ -20,7 +20,7 @@ Steps:
 * Download the GGUF file for model you want to host. A good model that runs on CPU and has MIT license is Phi-3.
 ```
 mkdir -p ~/models
-huggingface-cli download microsoft/Phi-3-mini-4k-instruct-gguf Phi-3-mini-4k-instruct-q4.gguf --local-dir ~/repos/models --local-dir-use-symlinks False
+huggingface-cli download microsoft/Phi-3-mini-4k-instruct-gguf Phi-3-mini-4k-instruct-q4.gguf --local-dir ~/repos/models
 ```
 * Run the model using docker server container
 ```
