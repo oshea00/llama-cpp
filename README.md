@@ -1,6 +1,4 @@
-# Running llama-server locally with docker
-
-Running a local LLM using llama.cpp project docker container.
+# Running LLM locally with Docker and llama.cpp server
 
 Note: This works on x86_64 achitectures (windows/linux) without GPU. I found the Apple arm64 container would suddenly halt trying this method - even after forcing ```platform==linux/arm64``` on the docker run.
 
