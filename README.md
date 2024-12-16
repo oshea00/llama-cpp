@@ -18,11 +18,11 @@ Steps:
 * Download the GGUF file for model you want to host. A good model that runs on CPU and has MIT license is Phi-3.
 ```
 mkdir -p ~/models
-huggingface-cli download microsoft/Phi-3-mini-4k-instruct-gguf Phi-3-mini-4k-instruct-q4.gguf --local-dir ~/repos/models
+huggingface-cli download microsoft/Phi-3-mini-4k-instruct-gguf Phi-3-mini-4k-instruct-q4.gguf --local-dir ~/models
 ```
 * Run the model using docker server container
 ```
-docker run -d -v ~/repos/models:/models -p 8080:5000  ghcr.io/ggerganov/llama.cpp:server -m /models/Phi-3-mini-4k-instruct-q4.gguf --port 5000
+docker run -d -v ~/models:/models -p 8080:5000  ghcr.io/ggerganov/llama.cpp:server -m /models/Phi-3-mini-4k-instruct-q4.gguf --port 5000
 ```
 * UI at http://127.0.0.1:8080
 * API at http://127.0.0.1:8080/v1/chat/completions
